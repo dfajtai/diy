@@ -45,8 +45,8 @@ printf("eredeti alpha szög: %d°\n",rad2deg(alpha));
 printf("eredeti A' érték: %d\n",R * sin( alpha ));
 
 # alpha_max kövelése -> elforgatási holtjáték 
-alpha_relaxed = alpha * 1.05;
-printf("relaxált alpha szög (5%%-kal növelt érték): %d°\n",rad2deg(alpha_relaxed));
+alpha_relaxed = alpha * 1.20;
+printf("relaxált alpha szög (20%%-kal növelt érték): %d°\n",rad2deg(alpha_relaxed));
 
 A_d = R * sin( alpha_relaxed );
 printf("relaxált A' érték: %d mm\n", A_d);
