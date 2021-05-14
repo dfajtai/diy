@@ -1,7 +1,7 @@
 Fürdődézsa kezdeti paraméterei:
 N = ? db
-A = 120 mm
-R = 20 mm
+A = 110 mm
+R = 18 mm
 A' = ? mm
 A fürdődézsa cél átmérője: D = 1600 mm
 ------------------------------
@@ -13,17 +13,21 @@ f =
 
 @(N) abs (D_target - D (A, R, 2 * pi / N, N))
 
-Optimális faldeszka darabszám: 49.0123 db
-Felfelé kerekítve: 50 db
-eredeti alpha szög: 7.2°
-eredeti A' érték: 2.50666
-relaxált alpha szög (20%-kal növelt érték): 8.64°
-relaxált A' érték: 3.00451 mm
+Optimális faldeszka darabszám: 53.4099 db
+Felfelé kerekítve: 54 db
+eredeti alpha szög: 6.66667°
+eredeti A' érték: 2.08967
+relaxált alpha szög (50%-kal növelt érték): 10°
+relaxált A' érték: 3.12567 mm
 ------------------------------
 Fürdődézsa végleges paraméterei:
-N = 50 db
-A = 120 mm
-R = 20 mm
-A' = 3.00451 mm
+N = 54 db
+A = 110 mm
+R = 18 mm
+A' = 3.12567 mm
+Egy faldeszka effektív hossza: L = 95.1257
 A fürdődézsa közelítőleges átmérője közelítőleges középvonali kerület alapján:
-D = 1639.37 mm
+D = 1635.09 mm
+marás előtt szükséges keresztmetszet:
+A = 110 mm
+B = 40 mm

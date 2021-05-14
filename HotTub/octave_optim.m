@@ -6,15 +6,19 @@ close all;
 #   K     :=  kád kerület
 #   N     :=  faldeszka db szám
 #   A     :=  faldeszka anyagszélesség
-#   B     :=  faldeszka anyagvastagság (A/B ~ 11/4)
+#   B'    :=  faldeszka anyagvastagság ráhagyás pozitív profil két oldalán
+#   B     :=  faldeszka anyagvastagság (eredeti arány A/B ~ 11/4; ( R + B' ) * 2 ) 
 #   A_d   :=  faldeszka negatív profil eltolás (R és alpha függvénye) [A']
-#   R     :=  faldeszka pozitív profil sugár (A/R ~ 6)
+#   R     :=  faldeszka pozitív profil sugár (eredeti arány A/R ~ 6)
 #   alpha :=  két szomszédos faldeszka által bezárt külső szög (N függvénye)
-
+#   L     :=  egy faldeszka effektív hossza ( L = A - R + A' ) 
 
 D_target = 1600; # cél átmérő
-A = 120; 
-R = A/6; # empirikus
+A = 110; 
+R = floor(A/6); # empirikus
+B_d = 2;
+
+B = ( R + B_d ) * 2;
 
 disp("Fürdődézsa kezdeti paraméterei:");
 printf("N = ? db\nA = %d mm\nR = %d mm\nA' = ? mm\n",A,R);
@@ -45,8 +49,8 @@ printf("eredeti alpha szög: %d°\n",rad2deg(alpha));
 printf("eredeti A' érték: %d\n",R * sin( alpha ));
 
 # alpha_max kövelése -> elforgatási holtjáték 
-alpha_relaxed = alpha * 1.20;
-printf("relaxált alpha szög (20%%-kal növelt érték): %d°\n",rad2deg(alpha_relaxed));
+alpha_relaxed = alpha * 1.50;
+printf("relaxált alpha szög (50%%-kal növelt érték): %d°\n",rad2deg(alpha_relaxed));
 
 A_d = R * sin( alpha_relaxed );
 printf("relaxált A' érték: %d mm\n", A_d);
@@ -54,5 +58,8 @@ printf("relaxált A' érték: %d mm\n", A_d);
 disp("------------------------------");
 disp("Fürdődézsa végleges paraméterei:");
 printf("N = %u db\nA = %d mm\nR = %d mm\nA' = %d mm\n",opt_N,A,R,A_d);
-D_approx = opt_N * ( A - R + A_d ) / pi;
+L = A - R + A_d;
+printf("Egy faldeszka effektív hossza: L = %d\n",L);
+D_approx = opt_N * L / pi;
 printf("A fürdődézsa közelítőleges átmérője közelítőleges középvonali kerület alapján:\nD = %d mm\n",D_approx);
+printf("marás előtt szükséges keresztmetszet:\nA = %d mm\nB = %d mm\n",A, B);
