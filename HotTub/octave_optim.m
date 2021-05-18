@@ -1,4 +1,6 @@
 close all;
+clear all;
+clc;
 
 # Paraméterek:
 #
@@ -49,17 +51,35 @@ printf("eredeti alpha szög: %d°\n",rad2deg(alpha));
 printf("eredeti A' érték: %d\n",R * sin( alpha ));
 
 # alpha_max kövelése -> elforgatási holtjáték 
-alpha_relaxed = alpha * 1.50;
-printf("relaxált alpha szög (50%%-kal növelt érték): %d°\n",rad2deg(alpha_relaxed));
+alpha_relaxed = alpha * 1.75;
+printf("relaxált alpha szög (75%%-kal növelt érték): %d°\n",rad2deg(alpha_relaxed));
 
 A_d = R * sin( alpha_relaxed );
 printf("relaxált A' érték: %d mm\n", A_d);
 
 disp("------------------------------");
 disp("Fürdődézsa végleges paraméterei:");
+
 printf("N = %u db\nA = %d mm\nR = %d mm\nA' = %d mm\n",opt_N,A,R,A_d);
 L = A - R + A_d;
-printf("Egy faldeszka effektív hossza: L = %d\n",L);
+
+printf("Egy faldeszka effektív szélessége: L = %d\n",L);
 D_approx = opt_N * L / pi;
+
 printf("A fürdődézsa közelítőleges átmérője közelítőleges középvonali kerület alapján:\nD = %d mm\n",D_approx);
-printf("marás előtt szükséges keresztmetszet:\nA = %d mm\nB = %d mm\n",A, B);
+printf("Faldeszkák marás előtt szükséges keresztmetszete:\nA = %d mm\nB = %d mm\n",A, B);
+
+disp("------------------------------");
+
+floor_thickness = 20; # padló vastagsága
+floor_overhang = 10; # padló átfedése a fallal
+floor_profile_depth = 8; #padló deszkák kötési profiljának mélysége
+
+floor_radius = ( D_approx / 2 + floor_displacement );
+floor_area = ( floor_radius ^ 2 * pi ) / ( 1000 ^ 2 );
+
+printf("A fürdődézsa padlójának sugara ( %d mm falátfedéssel ): %d m^2\n", floor_overhang, floor_radius);
+printf("A fürdődézsa padlójának területe: %d m^2\n", floor_overhang, floor_area);
+
+
+
