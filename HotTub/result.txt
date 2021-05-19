@@ -1,3 +1,6 @@
+
+************************ FÜRDŐDÉZSA - FALDESZKA ************************
+
 Fürdődézsa kezdeti paraméterei:
 N = ? db
 A = 110 mm
@@ -5,29 +8,42 @@ R = 18 mm
 A' = ? mm
 A fürdődézsa cél átmérője: D = 1600 mm
 ------------------------------
-D =
-
-@(A, R, alpha, N) (N / pi) * (A - R * (1 - sin (alpha)))
-
-f =
-
-@(N) abs (D_target - D (A, R, 2 * pi / N, N))
-
 Optimális faldeszka darabszám: 53.4099 db
 Felfelé kerekítve: 54 db
 eredeti alpha szög: 6.66667°
 eredeti A' érték: 2.08967
-relaxált alpha szög (50%-kal növelt érték): 10°
-relaxált A' érték: 3.12567 mm
+relaxált alpha szög (75%-kal növelt érték): 11.6667°
+relaxált A' érték: 3.63992 mm
 ------------------------------
 Fürdődézsa végleges paraméterei:
 N = 54 db
 A = 110 mm
 R = 18 mm
-A' = 3.12567 mm
-Egy faldeszka effektív hossza: L = 95.1257
+A' = 3.63992 mm
+Egy faldeszka effektív szélessége: L = 95.6399
 A fürdődézsa közelítőleges átmérője közelítőleges középvonali kerület alapján:
-D = 1635.09 mm
-marás előtt szükséges keresztmetszet:
+D = 1643.93 mm
+Faldeszkák marás előtt szükséges keresztmetszete:
 A = 110 mm
 B = 40 mm
+
+************************ FÜRDŐDÉZSA - PADLÓDESZKA ************************
+
+Padló kezdeti paraméterei:
+vastagság: 20 mm
+átfedés fallal: 10 mm
+kötés profil mélység: 10 mm
+Kivágandó padló sugara (átfedéssel): 821.965 mm; területe: 2.12254 m^2
+------------------------------
+Optimális padlódeszka darabszám: 12.7602 db
+Kerekítve: 13 db
+Padlódeszkák marás előtti szélessége 137.995 mm
+Padlódeszkák hosszai [mm]
+ Columns 1 through 8:
+
+    886.77   1200.70   1402.11   1535.93   1619.02   1659.00   1663.93   1659.00
+
+ Columns 9 through 13:
+
+   1619.02   1535.93   1402.11   1200.70    886.77
+Padlódeszkák össz. hossza: 18.271 m

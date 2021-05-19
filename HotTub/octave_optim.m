@@ -15,6 +15,8 @@ clc;
 #   alpha :=  két szomszédos faldeszka által bezárt külső szög (N függvénye)
 #   L     :=  egy faldeszka effektív hossza ( L = A - R + A' ) 
 
+disp("\n************************ FÜRDŐDÉZSA - FALDESZKA ************************\n");
+
 D_target = 1600; # cél átmérő
 A = 110; 
 R = floor(A/6); # empirikus
@@ -28,15 +30,19 @@ printf("A fürdődézsa cél átmérője: D = %d mm\n",D_target);
 disp("------------------------------");
 
 # D értéke A, R, alpha és N függvényében
-D = @(A, R, alpha, N)  ( N / pi ) * ( A - R * (1 - sin( alpha ) ) )
+D = @(A, R, alpha, N)  ( N / pi ) * ( A - R * (1 - sin( alpha ) ) );
 
 # alpha maximális, ha alpha = 2 * pi / N
 # minimalizálandó függvény rögzített A és R mellett, maximális alpha esetén.
 
-f = @(N) abs( D_target - D(A, R, 2 * pi / N , N) )
+f = @(N) abs( D_target - D(A, R, 2 * pi / N , N) );
 
 N_scale = [1:1:100];
+
+hold on
 plot(N_scale, arrayfun(f,N_scale));
+grid on
+hold off
 
 guess_N = 30;
 [opt_N, opt_f] = fminunc(f,guess_N);
@@ -69,17 +75,39 @@ D_approx = opt_N * L / pi;
 printf("A fürdődézsa közelítőleges átmérője közelítőleges középvonali kerület alapján:\nD = %d mm\n",D_approx);
 printf("Faldeszkák marás előtt szükséges keresztmetszete:\nA = %d mm\nB = %d mm\n",A, B);
 
-disp("------------------------------");
+disp("\n************************ FÜRDŐDÉZSA - PADLÓDESZKA ************************\n");
 
 floor_thickness = 20; # padló vastagsága
 floor_overhang = 10; # padló átfedése a fallal
-floor_profile_depth = 8; #padló deszkák kötési profiljának mélysége
+floor_profile_depth = 10; #padló deszkák kötési profiljának mélysége
 
-floor_radius = ( D_approx / 2 + floor_displacement );
-floor_area = ( floor_radius ^ 2 * pi ) / ( 1000 ^ 2 );
+printf("Padló kezdeti paraméterei:\nvastagság: %d mm\nátfedés fallal: %d mm\nkötés profil mélység: %d mm\n",floor_thickness,floor_overhang,floor_profile_depth);
 
-printf("A fürdődézsa padlójának sugara ( %d mm falátfedéssel ): %d m^2\n", floor_overhang, floor_radius);
-printf("A fürdődézsa padlójának területe: %d m^2\n", floor_overhang, floor_area);
+floor_radius = ( ( D_approx - ( B / 2 ) ) / 2 + floor_overhang ); #középvonal korrekció (- B/2)
+floor_area = ( floor_radius ^ 2 * pi );
 
+printf("Kivágandó padló sugara (átfedéssel): %d mm; területe: %d m^2\n", floor_radius, floor_area / ( 1000 ^ 2 ));
 
+disp("------------------------------");
+fr_offset = 10; # ráhagyás körkivágás miatt
+f_R =  floor_radius + fr_offset ;
+floor_N_func = @(N) floor_area_approx(N,f_R,floor_profile_depth)(1); # minimalizálandó fgv
 
+N_scale = [0:0.5:100];
+
+hold on
+figure
+plot(N_scale, arrayfun(floor_N_func,N_scale));
+grid on
+hold off
+
+[floor_opt_N, floor_opt_f] = fminsearch(floor_N_func,100); # optimális padlódeszka szélesség keresése
+printf("Optimális padlódeszka darabszám: %d db\n", floor_opt_N);
+floor_opt_N = round(floor_opt_N);
+printf("Kerekítve: %d db\n", floor_opt_N);
+[S_hat, floor_lengths, floor_plank_width ] = floor_area_approx (floor_opt_N, f_R, floor_profile_depth);
+printf("Padlódeszkák marás előtti szélessége %d mm\n",floor_plank_width);
+printf("Padlódeszkák hosszai [mm]\n");
+disp(floor_lengths);
+floor_sum_len = sum(floor_lengths);
+printf("Padlódeszkák össz. hossza: %d m\n",floor_sum_len / 1000);
