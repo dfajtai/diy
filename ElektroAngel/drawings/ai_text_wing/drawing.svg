@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 297 210"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="drawing.svg"
+   inkscape:version="1.0.2 (1.0.2+r75+1)">
+  <defs
+     id="defs2">
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter1444"
+       x="-0.030141004"
+       width="1.060282"
+       y="-0.27828231"
+       height="1.5565646">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.0120341"
+         id="feGaussianBlur1446" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter1564"
+       x="-0.021204482"
+       width="1.042409"
+       y="-0.045253139"
+       height="1.0905063">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.52089722"
+         id="feGaussianBlur1566" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#2b3750"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="478.55423"
+     inkscape:cy="394.31094"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1052"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     id="layer1"
+     inkscape:groupmode="layer"
+     sodipodi:insensitive="true">
+    <g
+       id="g1578"
+       inkscape:label="EA">
+      <text
+         xml:space="preserve"
+         style="font-size:10.5833px;line-height:1.25;font-family:AI;-inkscape-font-specification:AI;display:inline;opacity:1;fill:#0cd4e9;fill-opacity:1;stroke-width:0.264583;filter:url(#filter1564)"
+         x="117.4043"
+         y="118.98682"
+         id="text839"
+         inkscape:label="blur_EA"><tspan
+           sodipodi:role="line"
+           id="tspan837"
+           x="117.4043"
+           y="118.98682"
+           style="font-size:36px;fill:#0cd4e9;fill-opacity:1;stroke-width:0.264583">EA</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:10.5833px;line-height:1.25;font-family:AI;-inkscape-font-specification:AI;display:inline;mix-blend-mode:normal;fill:#0cd4e9;fill-opacity:1;stroke-width:0.264583"
+         x="117.4043"
+         y="118.98682"
+         id="text1042"
+         inkscape:label="EA"><tspan
+           sodipodi:role="line"
+           id="tspan1040"
+           x="117.4043"
+           y="118.98682"
+           style="font-size:36px;fill:#0cd4e9;fill-opacity:1;stroke-width:0.264583">EA</tspan></text>
+    </g>
+    <g
+       id="g1572"
+       inkscape:label="ElektroAngel"
+       transform="translate(0,20.637507)">
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:10.5833px;line-height:1.25;font-family:OCR-A;-inkscape-font-specification:'OCR-A Bold';display:inline;opacity:0.678476;fill:#00ffb7;fill-opacity:1;stroke-width:0.264583;filter:url(#filter1444)"
+         x="107.13831"
+         y="107.50372"
+         id="text835"
+         inkscape:label="blur_ElektroAngel"><tspan
+           sodipodi:role="line"
+           id="tspan833"
+           x="107.13831"
+           y="107.50372"
+           style="fill:#00ffb7;fill-opacity:1;stroke-width:0.264583">Elektro Angel</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:10.5833px;line-height:1.25;font-family:OCR-A;-inkscape-font-specification:'OCR-A Bold';display:inline;fill:#00ffb7;fill-opacity:1;stroke-width:0.264583"
+         x="107.13831"
+         y="107.50372"
+         id="text1202"
+         inkscape:label="ElektroAngel"><tspan
+           sodipodi:role="line"
+           id="tspan1200"
+           x="107.13831"
+           y="107.50372"
+           style="fill:#00ffb7;fill-opacity:1;stroke-width:0.264583">Elektro Angel</tspan></text>
+    </g>
+  </g>
+</svg>
