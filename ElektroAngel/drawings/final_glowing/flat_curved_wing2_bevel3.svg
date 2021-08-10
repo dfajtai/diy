@@ -1129,7 +1129,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1152,8 +1152,9 @@
        y="134.53284"
        id="text1783"
        inkscape:label="ElektroAngel_blur"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"><tspan
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"
+       inkscape:export-filename="/home/fajtai/Git/diy/ElektroAngel/drawings/final_glowing/EA_glowing_600.png"><tspan
          sodipodi:role="line"
          id="tspan1781"
          x="103.14287"
@@ -1166,8 +1167,9 @@
        y="134.53284"
        id="text1394"
        inkscape:label="ElektroAngel"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"><tspan
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"
+       inkscape:export-filename="/home/fajtai/Git/diy/ElektroAngel/drawings/final_glowing/EA_glowing_600.png"><tspan
          sodipodi:role="line"
          id="tspan1392"
          x="103.14287"
@@ -1180,8 +1182,9 @@
        y="90.449059"
        id="text1595"
        inkscape:label="EA_blur"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"><tspan
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"
+       inkscape:export-filename="/home/fajtai/Git/diy/ElektroAngel/drawings/final_glowing/EA_glowing_600.png"><tspan
          sodipodi:role="line"
          x="138.97235"
          y="90.449059"
@@ -1194,11 +1197,12 @@
          id="tspan1593">A</tspan></text>
     <g
        id="g1737"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"
        inkscape:label="LW_blur"
        transform="matrix(-1,0,0,1,298.80437,0)"
-       style="display:inline;opacity:0.25;fill:none;stroke:#62beff;stroke-opacity:1;filter:url(#filter3021)">
+       style="display:inline;opacity:0.25;fill:none;stroke:#62beff;stroke-opacity:1;filter:url(#filter3021)"
+       inkscape:export-filename="/home/fajtai/Git/diy/ElektroAngel/drawings/final_glowing/EA_glowing_600.png">
       <path
          id="path1697"
          style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#62beff;stroke-width:3.77953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
@@ -1291,11 +1295,12 @@
     </g>
     <g
        id="g1538"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"
        inkscape:label="LW"
        transform="matrix(-1,0,0,1,298.80437,0)"
-       style="display:inline;fill:#008080">
+       style="display:inline;fill:#008080"
+       inkscape:export-filename="/home/fajtai/Git/diy/ElektroAngel/drawings/final_glowing/EA_glowing_600.png">
       <path
          id="path1498"
          style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#26bfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.77953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
@@ -1388,11 +1393,12 @@
     </g>
     <g
        id="g1779"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"
        inkscape:label="RW_blur"
        transform="translate(-0.11370478)"
-       style="opacity:0.25;fill:none;stroke:#62beff;stroke-opacity:1;filter:url(#filter3013)">
+       style="opacity:0.25;fill:none;stroke:#62beff;stroke-opacity:1;filter:url(#filter3013)"
+       inkscape:export-filename="/home/fajtai/Git/diy/ElektroAngel/drawings/final_glowing/EA_glowing_600.png">
       <path
          id="path1739"
          style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#62beff;stroke-width:3.77953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
@@ -1485,11 +1491,12 @@
     </g>
     <g
        id="g1331"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"
        inkscape:label="RW"
        transform="translate(-0.11370478)"
-       style="fill:#008080">
+       style="fill:#008080"
+       inkscape:export-filename="/home/fajtai/Git/diy/ElektroAngel/drawings/final_glowing/EA_glowing_600.png">
       <path
          id="path1286"
          style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#26bfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.77953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
@@ -1587,8 +1594,9 @@
        y="90.449059"
        id="text1298"
        inkscape:label="EA"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"><tspan
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"
+       inkscape:export-filename="/home/fajtai/Git/diy/ElektroAngel/drawings/final_glowing/EA_glowing_600.png"><tspan
          sodipodi:role="line"
          x="138.97235"
          y="90.449059"

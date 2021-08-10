@@ -3,14 +3,17 @@
 
 import glob
 import os
+from nibabel.nifti1 import Nifti1Image
 import numpy as np
 import pandas as pd
 import re
+import six
 
 from collections import OrderedDict
 import time
 
 import nibabel as nib
+import nilearn as nil
 from typing import Dict
 
 import textdistance
@@ -131,6 +134,44 @@ def get_segmentation(patient_id, segmentation_dir, segmentation_mask = "*Segment
     return seg_img, seg_label_dict
 
 
+def get_intersecting_volume(image_dict):
+    image_volumes = pd.DataFrame()
+
+    assert isinstance(image_dict,dict)
+
+    for image_name, nifti_image in six.iteritems(image_dict):
+        if not isinstance(nifti_image,Nifti1Image):
+            continue
+        image_start = voxel_to_world(nifti_image.affine,(0,0,0))
+        image_end = voxel_to_world(nifti_image.affine,nifti_image.shape)
+        image_start[0],image_end[0] = sorted([image_start[0],image_end[0]])
+        image_start[1],image_end[1] = sorted([image_start[1],image_end[1]])
+        image_start[2],image_end[2] = sorted([image_start[2],image_end[2]])
+
+        image_info = {"name":image_name}
+        image_info["x0"],image_info["y0"], image_info["z0"] = image_start[0], image_start[1], image_start[2]
+        image_info["x1"],image_info["y1"], image_info["z1"] = image_end[0], image_end[1], image_end[2]
+        image_volumes = image_volumes.append(image_info,ignore_index=True)
+
+    image_volumes = image_volumes[["name","x0","x1","y0","y1","z0","z1"]]
+    image_volumes = image_volumes.sort_values(by=["x0","y0","z0","x1","y1","z1","name"],ascending=[0,0,0,1,1,1,1]).reset_index(drop=True)    
+    
+    smallest_image_name = image_volumes.head(1).name.tolist()[0]
+    smallest_image = image_dict[smallest_image_name]
+
+    return smallest_image.affine, smallest_image.shape
+
+
+def process_patient_with_resampled_volumes(patient_id: str, image_dict: dict, segmentation_image: nib.Nifti1Image, label_dict: dict,
+                    processed_dir: str = None):
+    resampling_affine, resampling_shape = get_intersecting_volume(image_dict = _image_dict)
+    # TODO implement 'process_patient_with_resamling', which resamples image dict and the segmentation image with the
+    # previously calculated 'resampling_affine' and 'resampling_shape' using the nilearn.image.resample_image function, 
+    # then extract the intensity and label information from all images and all remaining voxels...
+
+    pass
+
+
 def process_patient(patient_id: str, image_dict: dict, segmentation_image: nib.Nifti1Image, label_dict: dict,
                     processed_dir: str = None, voxel_limit: int = 5000,
                     unlimited_labels:list = None, limiting_labels: list = None) -> pd.DataFrame:
@@ -231,6 +272,8 @@ def process_patient(patient_id: str, image_dict: dict, segmentation_image: nib.N
     return result_df
 
 
+
+
 if __name__ == '__main__':
     study_path = "/local_data/switzerland"
     data_dir = os.path.join(study_path, "data_nifti2")
@@ -262,8 +305,14 @@ if __name__ == '__main__':
             except Exception as e:
                 print(e)
                 continue
+            
+            #_results = process_patient(patient,_image_dict, segmentation_image, label_dict, processed_dir= processed_dir)
+            
 
-            _results = process_patient(patient,_image_dict, segmentation_image, label_dict, processed_dir= processed_dir)
+            _results = process_patient_with_resampled_volumes(patient,_image_dict, segmentation_image, 
+                                                              label_dict, processed_dir= processed_dir)
+
+
 
             if isinstance(_results,pd.DataFrame):
                 results_df = results_df.append(_results,ignore_index=True)
